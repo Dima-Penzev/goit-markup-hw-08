@@ -1,0 +1,17 @@
+.clients-link {
+    @include centeringFlex();
+
+    height: 90px;
+
+    border: 1px solid $color-social-icons;
+    border-radius: 4px;
+    color: $color-social-icons;
+
+    transition: color $duration-and-timing-function, border-color $duration-and-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+}

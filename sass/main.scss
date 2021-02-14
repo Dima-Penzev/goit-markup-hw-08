@@ -1,0 +1,20 @@
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './base/common';
+
+@import './components/logo';
+@import './components/button';
+@import './components/hero-title';
+@import './components/common-title';
+@import './components/description';
+@import './components/client-link';
+
+@import './layouts/header';
+@import './layouts/mobile-menu';
+@import './layouts/position-hero';
+@import './layouts/position-features';
+@import './layouts/position-actions';
+@import './layouts/position-team-section';
+@import './layouts/position-team-card';
+@import './layouts/position-clients';

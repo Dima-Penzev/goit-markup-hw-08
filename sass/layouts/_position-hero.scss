@@ -1,0 +1,24 @@
+.hero-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+    background-color: $main-background-color;
+    background-image: linear-gradient($overlay, $overlay), url(../images/hero-back.jpg);
+
+    .container {
+        @include centeringFlex();
+        height: 400px;
+        text-align: center;
+    }
+}
+
+.main-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.order {
+    display: inline-block;
+    padding: 10px 32px;
+}

@@ -1,0 +1,26 @@
+.team-section {
+    background-color: $team-background-color;
+
+    .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
+    }
+}
+
+.team-group {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.title-team {
+    margin: 0;
+    margin-bottom: 30px;
+}

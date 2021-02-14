@@ -1,0 +1,13 @@
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: block;
+
+    background-color: violet;
+
+    &.is-open {
+        display: none;
+    }
+}

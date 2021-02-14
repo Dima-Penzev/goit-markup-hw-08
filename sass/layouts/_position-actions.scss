@@ -1,0 +1,31 @@
+.actions {
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.actions-title {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.actions-group {
+    padding-bottom: 94px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions-item {
+    position: relative;
+
+    .picture {
+        display: block;
+    }
+
+    .label {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        padding: 27px 0 27px;
+    }
+}

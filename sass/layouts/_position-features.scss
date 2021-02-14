@@ -1,0 +1,42 @@
+.invisible {
+    display: none;
+}
+
+.feature {
+    padding: 60px 0 30px 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .box {
+        @include centeringFlex();
+        height: 120px;
+        margin-bottom: 30px;
+    
+        background: $team-background-color;
+        border-radius: 4px;
+    }
+
+    &-item {
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 2 * 15px) / 2);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 3 * 30px) / 4);
+        }
+    }
+}
+
+.title-fearure {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.text-feature {
+    margin: 0;
+    margin-bottom: 30px;
+}

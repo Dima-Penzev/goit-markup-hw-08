@@ -1,0 +1,79 @@
+.btn {
+    min-width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: $main-title-color;
+    background-color: $accent-color;
+    box-shadow: $hero-link-shadow;
+}
+
+.menu {
+    display: block;
+    padding: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.social-link {
+    @include centeringFlex();
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: $color-social-icons;
+
+    transition: color $duration-and-timing-function, background-color $duration-and-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $main-title-color;
+        background-color: $accent-color;
+    }
+
+    .social-icon {
+        height: 20px;
+    }
+}
+
+.basement-link {
+    background-color: $color-basement-icons;
+    color: $main-title-color;
+}
+
+.portfolio-btn {
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+
+    transition: color $duration-and-timing-function, background-color $duration-and-timing-function,
+        box-shadow $duration-and-timing-function;
+
+    color: $title-text-color;
+
+    &:hover,
+    &:focus {
+        color: $main-title-color;
+        background-color: $accent-color;
+        box-shadow: $portfolio-filter-shadow;
+    }
+}
