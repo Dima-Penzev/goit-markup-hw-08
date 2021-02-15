@@ -5,8 +5,6 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.16;
-    // font-size: 26px;
-    // line-height: 1.2;
     letter-spacing: 0.03em;
 
     color: $title-text-color;
@@ -15,8 +13,12 @@
         color: $accent-color;
     }
 
-}
+    &-footer {
+        color: $main-title-color;
+    }
 
-.logo-footer {
-    color: $main-title-color;
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.2;
+    }
 }
