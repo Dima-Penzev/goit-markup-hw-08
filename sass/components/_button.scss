@@ -16,7 +16,7 @@
 }
 
 .menu {
-    display: block;
+    @include centeringFlex();
     padding: 0;
     border: 0;
     width: 40px;
@@ -24,8 +24,29 @@
 
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $accent-color;
+    }
+
+    &.is-open {
+        z-index: 1;
+    }
+
+    &-close {
+        display: none;
+    }
+
+    &.is-open .menu-close {
+        display: block;
+    }
+
+    &.is-open .menu-open {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 
@@ -76,4 +97,14 @@
         background-color: $accent-color;
         box-shadow: $portfolio-filter-shadow;
     }
+}
+
+.header-social {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $accent-color;
 }

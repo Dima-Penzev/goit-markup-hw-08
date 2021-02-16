@@ -23,34 +23,35 @@
             <div class="container">
                 <div class="header-inner">
                     <a class="logo" href="/"><span class="logo-dif">Web</span>Studio</a>
-                    <button class="menu is-open" type="button" data-menu-button>
+                    <button class="menu" type="button" data-menu-button>
                         <svg class="mod" width="40" height="40">
-                            <use href="./images/first-sprite.svg#icon-mobile-menu"></use>
+                            <use
+                                class="menu-open"
+                                href="./images/first-sprite.svg#icon-mobile-menu"
+                            ></use>
+                            <use
+                                class="menu-close"
+                                href="./images/first-sprite.svg#icon-menu-close"
+                            ></use>
                         </svg>
                     </button>
-                    <div class="mobile-menu is-open" data-menu>
-                        <button class="close" type="button" data-menu-button>
-                            <svg>
-                                <use href="./images/first-sprite.svg#icon-vector"></use>
-                            </svg>
-                        </button>
+                    <div class="mobile-menu" data-menu>
                         <nav class="container-nav">
                             <ul class="header-nav nonlist">
-                                <li class="item">
+                                <li class="nav-item">
                                     <a class="nav-link current" href="#">Студия</a>
                                 </li>
-                                <li class="item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="./portfolio.html">Портфолио</a>
                                 </li>
-                                <li class="item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="#">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-
                         <ul class="header-contact nonlist">
                             <li class="item">
-                                <a class="contact" href="mailto:info@devstudio.com">
+                                <a class="contact contact-mail" href="mailto:info@devstudio.com">
                                     <svg class="mail mod">
                                         <use href="./images/first-sprite.svg#icon-envelope"></use>
                                     </svg>
@@ -58,12 +59,28 @@
                                 >
                             </li>
                             <li class="item">
-                                <a class="contact" href="tel:+380961111111">
+                                <a class="contact contact-phone" href="tel:+380961111111">
                                     <svg class="phone mod">
                                         <use href="./images/first-sprite.svg#icon-smartphone"></use>
                                     </svg>
                                     +38 096 111 11 11</a
                                 >
+                            </li>
+                        </ul>
+                        <ul class="mobile-social nonlist">
+                            <li class="mobile-social-item">
+                                <a class="header-social" href="#" aria-label="instagram"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="mobile-social-item">
+                                <a class="header-social" href="#" aria-label="twitter">Twitter</a>
+                            </li>
+                            <li class="mobile-social-item">
+                                <a class="header-social" href="#" aria-label="facebook">Facebook</a>
+                            </li>
+                            <li class="mobile-social-item">
+                                <a class="header-social" href="#" aria-label="linkedin">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
@@ -111,7 +128,6 @@
                                 влечет за собой.
                             </p>
                         </li>
-
                         <li class="feature-item">
                             <div class="box">
                                 <svg width="70" height="54">
@@ -124,7 +140,6 @@
                                 обуславливает.
                             </p>
                         </li>
-
                         <li class="feature-item">
                             <div class="box">
                                 <svg width="55" height="60">
