@@ -108,3 +108,23 @@
 
     color: $accent-color;
 }
+
+.close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $modal-close-button;
+
+    transition: color $duration-and-timing-function;
+    background-color: $main-title-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.cross {
+    width: 11px;
+    height: 11px;
+}

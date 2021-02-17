@@ -191,6 +191,25 @@ body {
   color: #2196f3;
 }
 
+.close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
+}
+
+.close:hover, .close:focus {
+  color: #2196f3;
+}
+
+.cross {
+  width: 11px;
+  height: 11px;
+}
+
 .nav-link {
   display: block;
   position: relative;
@@ -254,7 +273,15 @@ body {
   color: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .contact-phone {
+    font-size: 24px;
+    line-height: 1.17;
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .contact-phone {
     font-size: 34px;
     line-height: 1.17;
@@ -385,10 +412,17 @@ body {
 
 .agreement-label {
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .agreement-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .address {
@@ -511,8 +545,14 @@ body {
 
 .coment {
   width: 100%;
-  min-height: 120px;
+  max-height: 120px;
   resize: none;
+}
+
+@media screen and (min-width: 480px) {
+  .coment {
+    min-height: 120px;
+  }
 }
 
 .coment::-webkit-input-placeholder {
@@ -617,20 +657,14 @@ body {
   }
 }
 
-.mobile-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 48px 0 40px 48px;
+    padding: 48px 0 48px 40px;
     width: 100%;
-    height: 100%;
+    height: 100vmax;
     display: none;
     background-color: #ffffff;
   }
@@ -647,6 +681,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -754,6 +791,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -1353,5 +1392,129 @@ body {
 .portfolio-text {
   margin: 0;
   padding: 0 24px 20px 24px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal-box {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-box {
+  position: absolute;
+  max-width: 528px;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal-box {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-box {
+    padding: 30px 40px;
+  }
+}
+
+.modal-box .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal-box .modal-title {
+  margin: 0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal-box .modal-label {
+  position: relative;
+  display: block;
+}
+
+.modal-box .modal-input {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+}
+
+.modal-box .modal-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.modal-box .coment {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+}
+
+.modal-box .agreement-label {
+  display: block;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-box .agreement-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.modal-box .conditions {
+  color: #2196f3;
+  margin-left: 5px;
+}
+
+.modal-box .checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.modal-box .modal-btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 /*# sourceMappingURL=main.css.map */

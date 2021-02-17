@@ -14,18 +14,17 @@
 }
 
 .mobile-menu {
-    display: flex;
 
     @media screen and (max-width: 767px) {
         position: absolute;
         top: 0;
         left: 0;
 
-        padding: 48px 0 40px 48px;
+        padding: 48px 0 48px 40px;
         width: 100%;
-        height: 100%;
+        height: 100vmax;
         display: none;
-
+        
         background-color: $main-title-color;
 
         &.is-open {
@@ -35,6 +34,7 @@
     }
 
     @media screen and (min-width: 768px) {
+        display: flex;
         align-items: center;
         width: 100%;
     }
@@ -111,6 +111,7 @@
 
 .mobile-social {
     display: flex;
+    flex-wrap: wrap;
     @media screen and (min-width: 768px) {
         display: none;
     }

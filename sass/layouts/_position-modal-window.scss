@@ -21,8 +21,7 @@
 
 .modal-box {
     position: absolute;
-    width: 528px;
-    min-height: 581px;
+    max-width: 528px;
     padding: 40px;
 
     top: 50%;
@@ -35,6 +34,14 @@
     box-shadow: $modal-window-shadow;
     border-radius: 4px;
 
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 30px 40px;
+    }
+
     .close {
         position: absolute;
         top: 8px;
@@ -44,6 +51,7 @@
     .modal-title {
         margin: 0;
         margin-bottom: 12px;
+        text-align: center;
     }
 
     .modal-label {
@@ -72,8 +80,12 @@
     }
     
     .agreement-label {
-        @include centeringFlex();
+        display: block;
         margin-bottom: 30px;
+
+        @media screen and (min-width: 480px) {
+            @include centeringFlex();
+        }
     }
     
     .conditions {

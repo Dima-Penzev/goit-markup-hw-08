@@ -53,8 +53,12 @@
 
 .coment {
     width: 100%;
-    min-height: 120px;
+    max-height: 120px;
     resize: none;
+
+    @media screen and (min-width: 480px) {
+        min-height: 120px;
+    }
 
     &::placeholder {
         font-weight: 400;
