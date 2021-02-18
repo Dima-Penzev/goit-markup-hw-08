@@ -233,10 +233,11 @@ body {
   }
 }
 
+.current {
+  color: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
-  .current {
-    color: #2196f3;
-  }
   .current::after {
     content: "";
     position: absolute;

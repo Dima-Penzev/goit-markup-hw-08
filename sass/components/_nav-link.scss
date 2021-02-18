@@ -23,10 +23,10 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .current {
-        color: $accent-color;
+.current {
+    color: $accent-color;
 
+    @media screen and (min-width: 768px) {
         &::after {
             content: "";
             position: absolute;
