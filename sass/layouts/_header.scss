@@ -13,6 +13,10 @@
     }
 }
 
+.head {
+    border-bottom: 1px solid $header-underline-color;
+}
+
 .mobile-menu {
 
     @media screen and (max-width: 767px) {
@@ -29,6 +33,7 @@
 
         &.is-open {
             display: flex;
+            z-index: 1;
             flex-direction: column;
         }
     }
