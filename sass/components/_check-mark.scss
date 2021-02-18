@@ -1,0 +1,20 @@
+.checkbox-icon {
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+}
+
+.check-mark {
+    appearance: none;
+    position: absolute;
+
+    &:checked + .checkbox-icon {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        background-image: url(../images/checkmark.svg);
+        background-size: contain;
+        background-origin: border-box;
+    }
+}
