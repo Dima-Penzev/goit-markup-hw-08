@@ -1,0 +1,138 @@
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 80px;
+    }
+}
+
+.head {
+    border-bottom: 1px solid $header-underline-color;
+}
+
+.mobile-menu {
+
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 48px 0 48px 40px;
+        width: 100%;
+        height: 100vmax;
+        display: none;
+        
+        background-color: $main-title-color;
+
+        &.is-open {
+            display: flex;
+            z-index: 1;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.container-nav {
+    @media screen and (max-width: 767px) {
+        margin-bottom: auto;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-left: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-left: 93px;
+    }
+}
+
+.header-nav {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-link {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.header-contact {
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 64px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contact-phone {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 10px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 30px;
+    }
+}
+
+.mail, 
+.phone {
+    margin-right: 8px;
+}
+
+.mobile-social {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-social-item {
+    display: inline-flex;
+
+    &:not(:last-child):after {
+        content: "";
+        height: 22px;
+        width: 1px;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        background-color: $modal-border-color;
+    }
+}

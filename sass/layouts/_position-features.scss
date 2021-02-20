@@ -1,0 +1,58 @@
+.invisible {
+    display: none;
+}
+
+.feature {
+    padding: 60px 0 60px 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px; 
+        padding-bottom: 94px;
+    }
+
+    .box {
+        @include centeringFlex();
+        height: 120px;
+        margin-bottom: 30px;
+    
+        background: $team-background-color;
+        border-radius: 4px;
+    }
+
+    &-item {
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 2 * 15px) / 2);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 3 * 30px) / 4);
+        }
+
+        @media screen and (max-width: 767px) {
+            &:nth-child(n + 2) {
+                margin-top: 30px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            &:nth-child(n + 3) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.title-fearure {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.text-feature {
+    margin: 0;
+}

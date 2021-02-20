@@ -1,0 +1,63 @@
+.hero-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    background-color: $main-background-color;
+
+    @media screen and (max-width: 767px) {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-mobile.jpg);
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-tablet.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-desktop.jpg);
+    }
+
+    .container {
+        @include centeringFlex();
+        height: 400px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            height: 600px;
+        }
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero-item {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-mobile@2x.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+    .hero-item {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-tablet@2x.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero-item {
+        background-image: linear-gradient($overlay, $overlay), url(../images/hero/hero-desktop@2x.jpg);
+    }
+}
+
+.main-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.order {
+    display: inline-block;
+    padding: 10px 32px;
+}

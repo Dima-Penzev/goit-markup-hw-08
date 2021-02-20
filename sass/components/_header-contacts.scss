@@ -1,0 +1,60 @@
+.contact {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color;
+
+    transition: color $duration-and-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &-phone {
+        @media screen and (max-width: 479px) {
+            font-size: 24px;
+            line-height: 1.17;
+
+            color: $accent-color;
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            font-size: 34px;
+            line-height: 1.17;
+
+            color: $accent-color;
+        }
+    }
+
+    &-mail {
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+            line-height: 1.33;
+        }
+    }
+
+    .mail {
+        width: 16px;
+        height: 12px;
+    }
+
+    .phone {
+        width: 10px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mail,
+    .phone {
+        display: none;
+    }
+}
